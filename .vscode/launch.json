@@ -1,0 +1,33 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug encrypt_decrypt (WSL)",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}/encrypt_decrypt",
+      "args": [],
+      "cwd": "${workspaceFolder}",
+      "preLaunchTask": "build",
+
+      "MIMode": "gdb",
+      "console": "integratedTerminal",
+      "externalConsole": false,
+      "stopAtEntry": false
+    },
+    {
+      "name": "Debug cryption (WSL)",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}/cryption",
+      "args": ["your_task_data_here"],
+      "cwd": "${workspaceFolder}",
+      "preLaunchTask": "build",
+
+      "MIMode": "gdb",
+      "console": "integratedTerminal",
+      "externalConsole": false,
+      "stopAtEntry": false
+    }
+  ]
+}
