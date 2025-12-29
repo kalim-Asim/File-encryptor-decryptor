@@ -31,10 +31,10 @@ int main(int argc, char* argv[]) {
                         Action taskAction = (action == "encrypt") ? Action::ENCRYPT : Action::DECRYPT;
                         auto task = std::make_unique<Task>(std::move(f_stream), taskAction, filePath);
                         
-                            std::time_t t = std::time(nullptr);
-                            std::tm* now = std::localtime(&t);
-                            std::cout << "Starting the encryption/decryption at: " << std::put_time(now, "%Y-%m-%d %H:%M:%S") << std::endl;
-                            processManagement.submitToQueue(std::move(task));
+                        std::time_t t = std::time(nullptr);
+                        std::tm* now = std::localtime(&t);
+                        std::cout << "Starting the encryption/decryption at: " << std::put_time(now, "%Y-%m-%d %H:%M:%S") << std::endl;
+                        processManagement.submitToQueue(std::move(task));
 
                     } else {
                         std::cout << "Unable to open file: " << filePath << std::endl;

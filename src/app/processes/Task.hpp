@@ -14,10 +14,13 @@ enum class Action {
 
 struct Task {
     std::string filePath;
-    std::fstream f_stream;
     Action action;
+    std::fstream f_stream;
 
-    Task(std::fstream&& stream, Action act, std::string filePath) : f_stream(std::move(stream)), action(act), filePath(filePath) {}
+    Task(std::fstream&& stream, Action act, std::string path)
+        : filePath(std::move(path)),
+          action(act),
+          f_stream(std::move(stream)) {}
 
     std::string toString() const {
         std::ostringstream oss;

@@ -7,8 +7,7 @@
 #include <atomic>
 #include <semaphore.h>
 
-class ProcessManagement
-{
+class ProcessManagement {
     sem_t* itemsSemaphore;
     sem_t* emptySlotsSemaphore;
 
